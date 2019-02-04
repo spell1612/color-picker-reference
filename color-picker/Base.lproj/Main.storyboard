@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29s-OG-aTO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Color Picker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ColorPickerMain" customModule="color_picker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a color that's not grey " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11j-mR-VfJ">
+                                <rect key="frame" x="117.5" y="288.5" width="140" height="90.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="3Na-sA-BUT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4867211505412059" green="0.48965754533678751" blue="0.4838282443711549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="11j-mR-VfJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4tQ-3P-ViJ"/>
+                            <constraint firstItem="11j-mR-VfJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ll6-50-CIN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Color Picker" id="wzl-c1-yNc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nJp-nC-fIk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FLi-N5-M9w">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="QZU-GS-WHd" kind="show" identifier="mainToPicker" id="W05-Ov-VmR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorLabel" destination="11j-mR-VfJ" id="hVr-sN-mYt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3566" y="180"/>
+        </scene>
+        <!--Palette Picker-->
+        <scene sceneID="UAP-cE-ni0">
+            <objects>
+                <viewController id="QZU-GS-WHd" customClass="PalettePicker" customModule="color_picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ssl-eL-uHh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-Ac-n4q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5N-bT-IxP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                        <state key="normal" title="Pink">
+                                            <color key="titleColor" red="0.070517186582679692" green="0.19007068188355514" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnOnPressWithSender:" destination="QZU-GS-WHd" eventType="touchUpInside" id="Ufb-Sa-3cT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qju-aV-SEa">
+                                        <rect key="frame" x="0.0" y="120.5" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" red="1" green="0.011777972254914837" blue="0.89244558738653479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnOnPressWithSender:" destination="QZU-GS-WHd" eventType="touchUpInside" id="jc1-Eh-IQ6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9Z-G8-tt8">
+                                        <rect key="frame" x="0.0" y="241" width="375" height="121"/>
+                                        <color key="backgroundColor" red="1" green="0.9565388237415855" blue="0.29299729668338603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                        <state key="normal" title="Yellow">
+                                            <color key="titleColor" red="0.12910889720233829" green="0.01238786348588217" blue="0.74365482233502544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnOnPressWithSender:" destination="QZU-GS-WHd" eventType="touchUpInside" id="Z6d-9W-Txl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keD-lt-rGK">
+                                        <rect key="frame" x="0.0" y="362" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.55494279378292322" green="1" blue="0.39365164798870655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" red="1" green="0.083577889770476865" blue="0.93068612940147311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnOnPressWithSender:" destination="QZU-GS-WHd" eventType="touchUpInside" id="Rsx-w1-X0T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFu-nC-0dd">
+                                        <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.26200047886788413" blue="0.22453627695970357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.99063824445722393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnOnPressWithSender:" destination="QZU-GS-WHd" eventType="touchUpInside" id="sLY-Ff-p3T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="keD-lt-rGK" firstAttribute="leading" secondItem="6O5-Ac-n4q" secondAttribute="leading" id="4VC-cU-adY"/>
+                                    <constraint firstAttribute="trailing" secondItem="V5N-bT-IxP" secondAttribute="trailing" id="7jO-yN-oKv"/>
+                                    <constraint firstAttribute="trailing" secondItem="qju-aV-SEa" secondAttribute="trailing" id="PFs-2d-8RK"/>
+                                    <constraint firstAttribute="trailing" secondItem="keD-lt-rGK" secondAttribute="trailing" id="TGY-GD-4Qq"/>
+                                    <constraint firstItem="V5N-bT-IxP" firstAttribute="leading" secondItem="6O5-Ac-n4q" secondAttribute="leading" id="X67-WL-V2T"/>
+                                    <constraint firstItem="qju-aV-SEa" firstAttribute="leading" secondItem="6O5-Ac-n4q" secondAttribute="leading" id="bNu-Gd-gtI"/>
+                                    <constraint firstItem="t9Z-G8-tt8" firstAttribute="leading" secondItem="6O5-Ac-n4q" secondAttribute="leading" id="cQL-mV-aWA"/>
+                                    <constraint firstItem="fFu-nC-0dd" firstAttribute="leading" secondItem="6O5-Ac-n4q" secondAttribute="leading" id="dG7-Ig-IFs"/>
+                                    <constraint firstAttribute="trailing" secondItem="fFu-nC-0dd" secondAttribute="trailing" id="lnS-7J-ipD"/>
+                                    <constraint firstAttribute="trailing" secondItem="t9Z-G8-tt8" secondAttribute="trailing" id="xuf-SX-XRI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6O5-Ac-n4q" firstAttribute="leading" secondItem="W00-y0-hwe" secondAttribute="leading" id="TmS-kb-oKh"/>
+                            <constraint firstItem="W00-y0-hwe" firstAttribute="bottom" secondItem="6O5-Ac-n4q" secondAttribute="bottom" id="YRd-On-QlK"/>
+                            <constraint firstItem="6O5-Ac-n4q" firstAttribute="top" secondItem="W00-y0-hwe" secondAttribute="top" id="x0Q-4x-1qy"/>
+                            <constraint firstItem="W00-y0-hwe" firstAttribute="trailing" secondItem="6O5-Ac-n4q" secondAttribute="trailing" id="xu7-3n-X3a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W00-y0-hwe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a54-Qf-aTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4270" y="54"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sta-dR-Ehj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29s-OG-aTO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="INO-18-WN0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zBd-6X-4Va"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSc-RQ-rSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831" y="54"/>
         </scene>
     </scenes>
 </document>
