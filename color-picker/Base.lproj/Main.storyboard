@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29s-OG-aTO">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ColorPickerMain" customModule="color_picker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a color that's not grey " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11j-mR-VfJ">
-                                <rect key="frame" x="117.5" y="288.5" width="140" height="90.5"/>
+                                <rect key="frame" x="137" y="403" width="140" height="90.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="3Na-sA-BUT"/>
                                 </constraints>
@@ -56,14 +56,14 @@
             <objects>
                 <viewController id="QZU-GS-WHd" customClass="PalettePicker" customModule="color_picker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ssl-eL-uHh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-Ac-n4q">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5N-bT-IxP">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="161.5"/>
                                         <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="Pink">
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qju-aV-SEa">
-                                        <rect key="frame" x="0.0" y="120.5" width="375" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="161.5" width="414" height="161.5"/>
                                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="Blue">
@@ -85,7 +85,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9Z-G8-tt8">
-                                        <rect key="frame" x="0.0" y="241" width="375" height="121"/>
+                                        <rect key="frame" x="0.0" y="323" width="414" height="162"/>
                                         <color key="backgroundColor" red="1" green="0.9565388237415855" blue="0.29299729668338603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="Yellow">
@@ -96,7 +96,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keD-lt-rGK">
-                                        <rect key="frame" x="0.0" y="362" width="375" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="485" width="414" height="161.5"/>
                                         <color key="backgroundColor" red="0.55494279378292322" green="1" blue="0.39365164798870655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="Green">
@@ -107,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFu-nC-0dd">
-                                        <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="646.5" width="414" height="161.5"/>
                                         <color key="backgroundColor" red="1" green="0.26200047886788413" blue="0.22453627695970357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <state key="normal" title="Red">
@@ -135,7 +135,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6O5-Ac-n4q" firstAttribute="leading" secondItem="W00-y0-hwe" secondAttribute="leading" id="TmS-kb-oKh"/>
-                            <constraint firstItem="W00-y0-hwe" firstAttribute="bottom" secondItem="6O5-Ac-n4q" secondAttribute="bottom" id="YRd-On-QlK"/>
+                            <constraint firstAttribute="bottom" secondItem="6O5-Ac-n4q" secondAttribute="bottom" id="YRd-On-QlK"/>
                             <constraint firstItem="6O5-Ac-n4q" firstAttribute="top" secondItem="W00-y0-hwe" secondAttribute="top" id="x0Q-4x-1qy"/>
                             <constraint firstItem="W00-y0-hwe" firstAttribute="trailing" secondItem="6O5-Ac-n4q" secondAttribute="trailing" id="xu7-3n-X3a"/>
                         </constraints>
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a54-Qf-aTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4270" y="54"/>
+            <point key="canvasLocation" x="4464" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sta-dR-Ehj">
@@ -152,7 +152,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29s-OG-aTO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="INO-18-WN0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
